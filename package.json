@@ -1,0 +1,15 @@
+{
+  "name": "my-interactive-site",
+  "version": "1.0.0",
+  "description": "موقع تفاعلي يقدم نصائح ومعلومات حول الفواكه، الملابس، الخدمات، والإعلانات، مع ألعاب تفاعلية.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9"
+  },
+  "author": "اسمك",
+  "license": "ISC"
+}

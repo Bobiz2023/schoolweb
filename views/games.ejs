@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الألعاب التفاعلية</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    #game-container {
+      text-align: center;
+    }
+    #fruit-game {
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ألعاب تفاعلية</h1>
+    <nav>
+      <ul>
+        <li><a href="/">الرئيسية</a></li>
+        <li><a href="/fruits">انتقاء الفواكه</a></li>
+        <li><a href="/clothes">اختيار الملابس</a></li>
+        <li><a href="/services">الخدمات</a></li>
+        <li><a href="/ads">الإشهار</a></li>
+        <li><a href="/games">الألعاب</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>ألعاب ممتعة للتعلم والتسلية</h2>
+    <section id="game-container">
+      <div id="fruit-game">
+        <h3>لعبة اختيار الفواكه</h3>
+        <p>اختر الفاكهة الصحيحة من الخيارات التالية:</p>
+        <div id="question">ما هي الفاكهة التي تكون ناضجة عندما تكون قشرتها حمراء وزاهية؟</div>
+        <button onclick="checkAnswer('apple')">تفاح</button>
+        <button onclick="checkAnswer('banana')">موز</button>
+        <button onclick="checkAnswer('watermelon')">بطيخ</button>
+        <p id="result" class="hidden"></p>
+      </div>
+    </section>
+    <script>
+      function checkAnswer(answer) {
+        const correctAnswer = 'apple';
+        const resultElement = document.getElementById('result');
+        if (answer === correctAnswer) {
+          resultElement.textContent = 'صحيح! التفاح هو الفاكهة التي تكون ناضجة عندما تكون قشرتها حمراء وزاهية.';
+        } else {
+          resultElement.textContent = 'خطأ! حاول مرة أخرى.';
+        }
+        resultElement.classList.remove('hidden');
+      }
+    </script>
+  </main>
+</body>
+</html>
+
